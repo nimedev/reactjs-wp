@@ -1,20 +1,39 @@
+// core modules
+const path = require('path')
+
 // npm modules
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ip = require('ip')
+const merge = require('webpack-merge')
 const validate = require('webpack-validator')
 
-// Webpack plugins
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+// Configuration parts
+const parts = require('./libs/webpack.parts')
 
-// Config parts
-const webpackParts = require('./libs/webpack.parts')
+// Constants & Variables
+const PATHS = {
+  app: path.join(__dirname, 'src'),
+  dist: path.join(__dirname, 'dist'),
+  images: path.join(__dirname, 'src/assets/img'),
+  fonts: path.join(__dirname, 'src/assets/fonts'),
+  copy: [
+    {
+      from: './src/assets',
+      to: 'assets'
+    }, {
+      from: './src/favicon.ico'
+    }, {
+      from: './src/robots.txt'
+    }]
+}
 
-/**
- * Webpack configuration for development environment
- */
-module.exports = validate({
-  context: __dirname,
-  entry: './src/index.js',
+// Common settings for webpack
+const common = {
+  entry: {
+    app: PATHS.app
+  },
   output: {
+    path: PATHS.dist,
     filename: '[name].js'
   },
   plugins: [
@@ -23,9 +42,7 @@ module.exports = validate({
       hash: true
     })
   ],
-  devtool: 'source-map',
   resolve: {
-    root: __dirname,
     extensions: ['', '.js', '.jsx', '.json', '.css']
   },
   resolveLoader: {
@@ -34,7 +51,7 @@ module.exports = validate({
   module: {
     preLoaders: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         loaders: ['eslint']
       },
       {
@@ -44,45 +61,68 @@ module.exports = validate({
     ],
     loaders: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         loader: 'babel',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css!postcss'
+        include: PATHS.app
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        loader: 'json',
+        include: PATHS.app
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url?limit=10000&mimetype=application/font-woff'
+        loader: 'url?limit=10000&mimetype=application/font-woff',
+        include: PATHS.fonts
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file'
+        loader: 'file',
+        include: PATHS.fonts
       },
       {
         test: /\.jpg$/,
-        exclude: /node_modules/,
-        loader: 'file'
+        loader: 'file',
+        include: PATHS.images
       },
       {
         test: /\.png$/,
-        exclude: /node_modules/,
-        loader: 'url'
+        loader: 'url',
+        include: PATHS.images
       }
     ]
   },
-  postcss: webpackParts.postcss,
-  devServer: {
-    host: process.env.REACTJS_HOST || ip.address(),
-    port: process.env.REACTJS_PORT || 3000,
-    contentBase: ['./src', '../static'],
-    historyApiFallback: true,
-    inline: true,
-    stats: 'normal'
-  }
-})
+  postcss: parts.postcss
+}
+
+// Detect how npm is run and branch based on that
+let config
+switch (process.env.npm_lifecycle_event) {
+  case 'build':
+    config = merge(
+      common,
+      parts.clean(PATHS.dist),
+      parts.minify(),
+      parts.extractCSS(PATHS.app),
+      parts.copy(PATHS.copy)
+    )
+    break
+  default:
+    config = merge(
+      common,
+      {
+        devtool: 'eval-source-map'
+      },
+      parts.setupCSS(PATHS.app),
+      parts.devServer({
+        // Customize host/port here if needed
+        host: process.env.REACTJS_HOST || ip.address(),
+        port: process.env.REACTJS_PORT || 3000
+      })
+    )
+}
+
+/**
+ * Webpack configuration
+ */
+module.exports = validate(config)

@@ -14,6 +14,7 @@
     "__DEV__": true
   },
   "plugins": [
+    "jsx-a11y",
     "react"
   ],
   "ecmaFeatures": {
@@ -28,10 +29,7 @@
     "objectLiteralComputedProperties": true
   },
   "rules": {
-    "jsx-quotes": [
-      2,
-      "prefer-single"
-    ],
+    "jsx-quotes": 2,
     "no-alert": 2,
     "no-array-constructor": 2,
     "no-caller": 2,
@@ -119,16 +117,27 @@
     "valid-typeof": 1,
     "wrap-iife": 2,
     "wrap-regex": 0,
+    "jsx-a11y/aria-role": 1,
+    "jsx-a11y/img-has-alt": 1,
+    "jsx-a11y/img-redundant-alt": 1,
+    "jsx-a11y/no-access-key": 1,
+    "react/jsx-boolean-value": 1,
+    "react/jsx-curly-spacing": 1,
     "react/display-name": 0,
     "react/jsx-no-undef": 1,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
+    "react/jsx-wrap-multilines": 2,
+    "react/jsx-no-bind": 2,
     "react/no-did-mount-set-state": 0,
     "react/no-did-update-set-state": 0,
     "react/no-multi-comp": 2,
+    "react/jsx-pascal-case": 2,
+    "react/prefer-es6-class": 2,
+    "react/prefer-stateless-function": 2,
     "react/prop-types": 2,
     "react/react-in-jsx-scope": 1,
-    "react/self-closing-comp": 2,
-    "react/wrap-multilines": 2
+    "react/require-render-return": 2,
+    "react/self-closing-comp": 2
   }
 }

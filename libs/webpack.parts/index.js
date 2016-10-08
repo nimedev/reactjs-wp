@@ -3,13 +3,23 @@
  */
 
 // Configuration parts
+const clean = require('./clean')
+const copy = require('./copy')
+const devServer = require('./dev-server')
+const extractCSS = require('./extract-css')
+const minify = require('./minify')
 const postcss = require('./postcss')
-const tslint = require('./tslint')
+const setupCSS = require('./setup-css')
 
 /**
- * Group common webpack configurations
+ * Group parts of webpack configurations
  */
 module.exports = {
+  clean,
+  copy,
+  devServer,
+  extractCSS,
+  minify,
   postcss,
-  tslint
+  setupCSS
 }
