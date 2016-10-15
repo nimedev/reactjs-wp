@@ -12,7 +12,7 @@ node_modules
 typings
 npm-debug.log
 npm-debug.log.*
-app.constants.js
+src/constants/constants.js
 
 # System Files
 .DS_Store

@@ -6,6 +6,8 @@
 import React from 'react'
 
 // Statles component
-export function App() {
-  return <div>Hello world</div>
+const App = () => {
+  return <h1>Hello ReactJS</h1>
 }
+
+export default App

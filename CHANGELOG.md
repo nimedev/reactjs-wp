@@ -1,5 +1,19 @@
 # Change Log
 
+## [1.3.0] - 2012-10-15
+
+### Added
+- Add open script.
+
+### Modified
+- Move app configuration to config folder.
+- Migrate to yarn.
+
+### Updated
+- Upgrade autoprefixer, clean-webpack-plugin, eslint-plugin-react, eslint and stylelint.
+- Use nodejs v6.8.0.
+
+
 ## [1.2.0] - 2012-10-09
 
 ### Modified

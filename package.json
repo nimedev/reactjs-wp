@@ -1,19 +1,18 @@
 {
   "name": "reactjs-wp",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "npm run constants && webpack",
-    "constants": "node src/constants",
-    "start": "npm run watch",
+    "constants": "node config",
+    "start": "npm run open && npm run watch",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:js": "eslint --ext=js .",
-    "shrink": "npm prune && npm shrinkwrap --dev",
+    "open": "node libs/opener",
     "typings": "cd src && typings install",
-    "update": "npm install && npm prune --production=false && npm outdated",
     "watch": "parallelshell 'npm run watch:constants' 'webpack-dev-server'",
-    "watch:constants": "onchange 'src/constants/**/*.js' -i -- npm run constants"
+    "watch:constants": "onchange 'config/**/*.js' -i -- npm run constants"
   },
   "pre-commit": [
     "lint"
@@ -36,8 +35,8 @@
   },
   "homepage": "https://github.com/nimedev/reactjs-wp#readme",
   "engines": {
-    "npm": ">=3.10.3",
-    "node": ">=6.7.0 <7.0.0"
+    "npm": ">=3.10.8",
+    "node": ">=6.8.0 <7.0.0"
   },
   "dependencies": {
     "niduscss-base": "1.0.1",
@@ -56,26 +55,27 @@
     "react-dom": "15.3.2"
   },
   "devDependencies": {
-    "autoprefixer": "6.5.0",
+    "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",
     "babel-loader": "6.2.5",
     "babel-preset-es2015": "6.16.0",
     "babel-preset-react": "6.16.0",
     "babel-preset-stage-1": "6.16.0",
-    "clean-webpack-plugin": "0.1.12",
+    "clean-webpack-plugin": "0.1.13",
     "copy-webpack-plugin": "3.0.1",
     "css-loader": "0.25.0",
-    "eslint": "3.7.1",
+    "eslint": "3.8.0",
     "eslint-loader": "1.5.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
-    "eslint-plugin-react": "6.4.0",
+    "eslint-plugin-react": "6.4.1",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
     "html-webpack-plugin": "2.22.0",
     "ip": "1.1.3",
     "json-loader": "0.5.4",
     "onchange": "3.0.2",
+    "opener": "1.4.2",
     "parallelshell": "2.0.0",
     "postcss-calc": "5.3.1",
     "postcss-color-function": "2.0.1",
@@ -87,7 +87,7 @@
     "postcss-nested": "1.0.0",
     "pre-commit": "1.1.3",
     "style-loader": "0.13.1",
-    "stylelint": "7.4.1",
+    "stylelint": "7.4.2",
     "stylelint-config-nimedev": "7.0.0",
     "url-loader": "0.5.7",
     "webpack": "1.13.2",
