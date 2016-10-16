@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.3.1] - 2012-10-16
+
+### Added
+- Add set-free-variable module to webpack parts.
+
+
 ## [1.3.0] - 2012-10-15
 
 ### Added

@@ -5,9 +5,9 @@
 // Dependencies
 import React from 'react'
 
-// Statles component
-const App = () => {
-  return <h1>Hello ReactJS</h1>
-}
+const App = () => <h1>Hello ReactJS</h1>
 
+/**
+ * App component
+ */
 export default App

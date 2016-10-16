@@ -99,8 +99,13 @@ const common = {
 let config
 switch (process.env.npm_lifecycle_event) {
   case 'build':
+  case 'build:prod':
     config = merge(
       common,
+      parts.setFreeVariable(
+        'process.env.NODE_ENV',
+        process.env.NODE_ENV
+      ),
       parts.clean(PATHS.dist),
       parts.minify(),
       parts.extractCSS(PATHS.app),
