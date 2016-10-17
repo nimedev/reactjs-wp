@@ -6,8 +6,10 @@
 // Dependencies
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { App } from './components'
+
+// Import base styles before all components
 import './styles'
+import { App } from './components'
 
 // Application component
 ReactDOM.render(

@@ -51,7 +51,7 @@ const common = {
   module: {
     preLoaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.(jsx|js)?$/,
         loaders: ['eslint']
       },
       {
@@ -61,7 +61,7 @@ const common = {
     ],
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.(jsx|js)?$/,
         loader: 'babel',
         include: PATHS.app
       },

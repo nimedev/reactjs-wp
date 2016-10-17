@@ -1,5 +1,16 @@
 # Change Log
 
+## [1.4.0] - 2012-10-17
+
+### Modified
+- Add js extension to eslint loader and babel loader.
+- Import base styles before all components.
+
+### Updated
+- Use nodejs v6.8.1.
+- Upgrade: eslint-loader, postcss-loader and postcss-mixins.
+
+
 ## [1.3.1] - 2012-10-16
 
 ### Added
