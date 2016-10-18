@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.4.1] - 2012-10-18
+
+### Updated
+- Upgrade eslint and webpack-merge.
+
+
 ## [1.4.0] - 2012-10-17
 
 ### Modified

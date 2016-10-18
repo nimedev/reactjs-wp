@@ -1,16 +1,16 @@
 {
   "name": "reactjs-wp",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "npm run constants && webpack",
     "build:prod": "export NODE_ENV='production' && npm run constants && webpack",
     "constants": "node config",
-    "start": "npm run open && npm run watch",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:js": "eslint --ext=js .",
     "open": "node libs/opener",
+    "start": "npm run open && npm run watch",
     "typings": "cd src && typings install",
     "watch": "parallelshell 'npm run watch:constants' 'webpack-dev-server'",
     "watch:constants": "onchange 'config/**/*.js' -i -- npm run constants"
@@ -66,7 +66,7 @@
     "clean-webpack-plugin": "0.1.13",
     "copy-webpack-plugin": "3.0.1",
     "css-loader": "0.25.0",
-    "eslint": "3.8.0",
+    "eslint": "3.8.1",
     "eslint-loader": "1.6.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "6.4.1",
@@ -93,7 +93,7 @@
     "url-loader": "0.5.7",
     "webpack": "1.13.2",
     "webpack-dev-server": "1.16.2",
-    "webpack-merge": "0.14.1",
+    "webpack-merge": "0.15.0",
     "webpack-validator": "2.2.9"
   }
 }
