@@ -1,35 +1,38 @@
 {
-  "parser": "babel-eslint",
   "env": {
     "es6": true,
     "browser": true,
-    "node": true,
-    "amd": true,
-    "jasmine": true,
-    "jquery": true
-  },
-  "globals": {
-    "jest": true,
-    "pit": true,
-    "__DEV__": true
+    "node": true
   },
   "plugins": [
     "jsx-a11y",
     "react"
   ],
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "templateStrings": true,
-    "generators": true,
-    "classes": true,
-    "modules": true,
-    "forOf": true,
-    "jsx": true,
-    "objectLiteralComputedProperties": true
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
   },
   "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
     "jsx-quotes": 2,
+    "max-len": [
+      "error",
+      80,
+      {
+        "ignorePattern": "/",
+        "ignoreUrls": true
+      }
+    ],
     "no-alert": 2,
     "no-array-constructor": 2,
     "no-caller": 2,
@@ -60,7 +63,14 @@
     "no-multi-str": 0,
     "no-new-wrappers": 2,
     "no-new-object": 2,
-    "no-unused-vars": 1,
+    "no-unused-expressions": [
+      2,
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "no-unused-vars": 2,
     "no-script-url": 2,
     "no-proto": 2,
     "no-redeclare": 2,
@@ -78,6 +88,7 @@
       2,
       "nofunc"
     ],
+    "no-whitespace-before-property": "error",
     "linebreak-style": 0,
     "block-scoped-var": 0,
     "camelcase": 2,
@@ -110,6 +121,10 @@
       2,
       "never"
     ],
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
     "space-infix-ops": 2,
     "strict": 0,
     "use-isnan": 2,
@@ -127,7 +142,12 @@
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
     "react/jsx-wrap-multilines": 2,
-    "react/jsx-no-bind": 2,
+    "react/jsx-no-bind": [
+      2,
+      {
+        "allowArrowFunctions": true
+      }
+    ],
     "react/no-did-mount-set-state": 0,
     "react/no-did-update-set-state": 0,
     "react/no-multi-comp": 2,

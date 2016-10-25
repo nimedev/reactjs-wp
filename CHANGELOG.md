@@ -1,5 +1,16 @@
 # Change Log
 
+## [1.5.0] - 2012-10-25
+
+### Modified
+- Disable javascript validation in .vscode settings.
+- Remove babel-eslint and update eslint configuration.
+
+### Updated
+- Use nodejs v6.9.1.
+- Upgrade stylelint, babel-core, babel-preset-es2015, copy-webpack-plugin and html-webpack-plugin.
+
+
 ## [1.4.1] - 2012-10-18
 
 ### Updated
