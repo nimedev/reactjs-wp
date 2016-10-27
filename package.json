@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "npm run constants && webpack",
@@ -9,8 +9,7 @@
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:js": "eslint --ext=js .",
-    "open": "node libs/opener",
-    "start": "npm run open && npm run watch",
+    "start": "npm run watch",
     "typings": "cd src && typings install",
     "watch": "parallelshell 'npm run watch:constants' 'webpack-dev-server'",
     "watch:constants": "onchange 'config/**/*.js' -i -- npm run constants"

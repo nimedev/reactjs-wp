@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.6.0] - 2012-10-27
+
+### Modified
+- Move some assets to public folder.
+
+
 ## [1.5.0] - 2012-10-25
 
 ### Modified

@@ -54,7 +54,7 @@ This create a `src/typings` folder which you can reference in your JavaScript fi
 #### Host configuration
 - `NODE_ENV="development"`. Environment for server.
 - `REACTJS_HOST=localIP`. Host of webapplication.
-- `REACTJS_PORT=3000`. Por of webapplication (Use in development).
+- `REACTJS_PORT=3000`. Port of webapplication (Use in development).
 
 #### Access URLs
 - `REACTJS_API_URL="http://${ip.address()}:${8080}/api"`. Url of API.
