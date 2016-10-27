@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.6.1] - 2012-10-27
+
+### Updated
+- Upgrade niduscss-elements-form, niduscss-lib-mixins, babel-loader and webpack.
+
+
 ## [1.6.0] - 2012-10-27
 
 ### Modified
