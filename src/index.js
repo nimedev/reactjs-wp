@@ -3,13 +3,12 @@
  * @module index
  */
 
-// Dependencies
-import React from 'react'
-import ReactDOM from 'react-dom'
-
 // Import base styles before all components
 import './styles'
-import { App } from './components'
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App'
 
 // Application component
 ReactDOM.render(

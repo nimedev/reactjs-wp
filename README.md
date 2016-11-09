@@ -34,18 +34,6 @@ If you don't have yarn installed go to [yarn](https://yarnpkg.com/en/docs/instal
 yarn
 ```
 
-#### 4) (Optional) Install a manager for TypeScript definitions `typings`.
-
-You can use `typings` for intellisense (I use this in VScode).
-
-```sh
-yarn global add typings
-# cd to your project folder
-yarn run typings
-```
-
-This create a `src/typings` folder which you can reference in your JavaScript files to get intellisense.
-
 
 ## Workflow
 

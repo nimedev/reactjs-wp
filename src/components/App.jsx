@@ -2,7 +2,6 @@
  * @module App
  */
 
-// Dependencies
 import React from 'react'
 
 const App = () => <h1>Hello ReactJS</h1>

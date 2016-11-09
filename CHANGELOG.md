@@ -1,5 +1,19 @@
 # Change Log
 
+## [1.7.0] - 2012-11-09
+
+### Deleted
+- Remove typings.
+
+### Modified
+- Use environemnt variables to set constants with webpack module.
+- Update App component.
+- Add jsx extension to lint:js script.
+
+### Updated
+- Upgrade autoprefixer, babel-core, clean-webpack-plugin, eslint-loader, eslint-plugin-react, eslint, html-webpack-plugin, postcss-loader, eslint-plugin-jsx-a11y, ip and postcss-import.
+
+
 ## [1.6.1] - 2012-10-27
 
 ### Updated

@@ -9,7 +9,6 @@ const devServer = require('./dev-server')
 const extractCSS = require('./extract-css')
 const minify = require('./minify')
 const postcss = require('./postcss')
-const setFreeVariable = require('./set-free-variable')
 const setupCSS = require('./setup-css')
 
 /**
@@ -22,6 +21,5 @@ module.exports = {
   extractCSS,
   minify,
   postcss,
-  setFreeVariable,
   setupCSS
 }
