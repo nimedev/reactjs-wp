@@ -1,12 +1,12 @@
 {
   "name": "reactjs-wp",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "webpack",
     "build:prod": "export NODE_ENV='production' && webpack",
     "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:css": "stylelint 'App/**/*.css'",
     "lint:js": "eslint . --ext .js --ext .jsx",
     "start": "npm run watch",
     "watch": "webpack-dev-server"
@@ -60,7 +60,7 @@
     "babel-preset-stage-1": "6.16.0",
     "clean-webpack-plugin": "0.1.14",
     "copy-webpack-plugin": "4.0.1",
-    "css-loader": "0.25.0",
+    "css-loader": "0.26.0",
     "eslint": "3.10.2",
     "eslint-loader": "1.6.1",
     "eslint-plugin-jsx-a11y": "3.0.1",

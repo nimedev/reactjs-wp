@@ -1,5 +1,14 @@
 # Change Log
 
+## [2.0.0] - 2012-11-17
+
+### Modified
+- Change folder structure.
+
+### Updated
+- Upgrade css-loader.
+
+
 ## [1.8.0] - 2012-11-16
 
 ### Added
