@@ -50,7 +50,11 @@ const common = {
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      hash: true
+      hash: true,
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      }
     })
   ],
   resolve: {

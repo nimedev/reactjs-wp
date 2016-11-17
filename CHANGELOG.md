@@ -1,5 +1,17 @@
 # Change Log
 
+## [1.8.0] - 2012-11-16
+
+### Added
+- Minify index.html when build.
+
+### Modified
+- Improve vscode settings.
+
+### Updated
+- Upgrade react, react-dom, autoprefixer, copy-webpack-plugin, eslint, eslint-plugin-react, postcss-import, postcss-loader and webpack-merge.
+
+
 ## [1.7.0] - 2012-11-09
 
 ### Deleted

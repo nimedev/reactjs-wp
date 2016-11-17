@@ -5,6 +5,12 @@
   // Controls the rendering size of tabs in characters. Accepted values: "auto", 2, 4, 6, etc. If set to "auto", the value will be guessed when a file is opened.
 	"editor.tabSize": 2,
 
+
+// Emmet
+
+	// Define profile for specified syntax or use your own profile with specific rules.
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+
  
 // Files
 
@@ -12,14 +18,12 @@
 	"files.exclude": {
 		"**/.git": true,
 		"**/.svn": true,
-		"**/.DS_Store": true,
-    "**/jspm_packages/github": true,
-    "**/jspm_packages/npm": true
+		"**/.DS_Store": true
 	},
 	
 	// Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
 	"files.associations": {
-		"*.css": "scss"
+		"*.css": "postcss"
 	},
 	
 	
