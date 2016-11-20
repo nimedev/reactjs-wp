@@ -1,6 +1,12 @@
 # Change Log
 
-## [2.0.1] - 2012-11-20
+## [2.0.2] - 2016-11-20
+
+### Fixed
+- Move babel-eslint to devDependencies.
+
+
+## [2.0.1] - 2016-11-20
 
 ### Added
 - Add babel-eslint to use es6 class properties.
@@ -12,7 +18,7 @@
 - Upgrade babel-loader and stylelint.
 
 
-## [2.0.0] - 2012-11-17
+## [2.0.0] - 2016-11-17
 
 ### Modified
 - Change folder structure.
@@ -21,7 +27,7 @@
 - Upgrade css-loader.
 
 
-## [1.8.0] - 2012-11-16
+## [1.8.0] - 2016-11-16
 
 ### Added
 - Minify index.html when build.
@@ -33,7 +39,7 @@
 - Upgrade react, react-dom, autoprefixer, copy-webpack-plugin, eslint, eslint-plugin-react, postcss-import, postcss-loader and webpack-merge.
 
 
-## [1.7.0] - 2012-11-09
+## [1.7.0] - 2016-11-09
 
 ### Deleted
 - Remove typings.
@@ -47,19 +53,19 @@
 - Upgrade autoprefixer, babel-core, clean-webpack-plugin, eslint-loader, eslint-plugin-react, eslint, html-webpack-plugin, postcss-loader, eslint-plugin-jsx-a11y, ip and postcss-import.
 
 
-## [1.6.1] - 2012-10-27
+## [1.6.1] - 2016-10-27
 
 ### Updated
 - Upgrade niduscss-elements-form, niduscss-lib-mixins, babel-loader and webpack.
 
 
-## [1.6.0] - 2012-10-27
+## [1.6.0] - 2016-10-27
 
 ### Modified
 - Move some assets to public folder.
 
 
-## [1.5.0] - 2012-10-25
+## [1.5.0] - 2016-10-25
 
 ### Modified
 - Disable javascript validation in .vscode settings.
@@ -70,13 +76,13 @@
 - Upgrade stylelint, babel-core, babel-preset-es2015, copy-webpack-plugin and html-webpack-plugin.
 
 
-## [1.4.1] - 2012-10-18
+## [1.4.1] - 2016-10-18
 
 ### Updated
 - Upgrade eslint and webpack-merge.
 
 
-## [1.4.0] - 2012-10-17
+## [1.4.0] - 2016-10-17
 
 ### Modified
 - Add js extension to eslint loader and babel loader.
@@ -87,13 +93,13 @@
 - Upgrade: eslint-loader, postcss-loader and postcss-mixins.
 
 
-## [1.3.1] - 2012-10-16
+## [1.3.1] - 2016-10-16
 
 ### Added
 - Add set-free-variable module to webpack parts.
 
 
-## [1.3.0] - 2012-10-15
+## [1.3.0] - 2016-10-15
 
 ### Added
 - Add open script.
@@ -107,7 +113,7 @@
 - Use nodejs v6.8.0.
 
 
-## [1.2.0] - 2012-10-09
+## [1.2.0] - 2016-10-09
 
 ### Modified
 - modify environment variables for API.
@@ -116,7 +122,7 @@
 - Upgrade clean-webpack-plugin, eslint-plugin-jsx-a11y, eslint-plugin-react and stylelint.
 
 
-## [1.1.0] - 2012-10-08
+## [1.1.0] - 2016-10-08
 
 ### Added
 - Add eslint rules.
@@ -129,6 +135,6 @@
 - Upgrade postcss-mixins.
 
 
-## [1.0.0] - 2012-10-07
+## [1.0.0] - 2016-10-07
 
 * First release.
