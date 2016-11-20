@@ -1,5 +1,17 @@
 # Change Log
 
+## [2.0.1] - 2012-11-20
+
+### Added
+- Add babel-eslint to use es6 class properties.
+
+### Modified
+- Update vscode settings.
+
+### Updated
+- Upgrade babel-loader and stylelint.
+
+
 ## [2.0.0] - 2012-11-17
 
 ### Modified
