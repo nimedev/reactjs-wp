@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.1.0] - 2016-12-05
+
+### Updated
+- Upgrade react, react-dom, css-loader, eslint, eslint-plugin-react, postcss-import, postcss-loader, webpack-merge and webpack-validator
+
+
 ## [2.0.2] - 2016-11-20
 
 ### Fixed
