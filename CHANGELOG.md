@@ -1,5 +1,12 @@
 # Change Log
 
+## [2.1.1] - 2016-12-12
+
+### Updated
+- Upgrade babel-core, babel-loader, eslint, webpack, webpack-merge and webpack-validator.
+- Use node 6.9.2.
+
+
 ## [2.1.0] - 2016-12-05
 
 ### Updated
