@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.2.0] - 2016-12-27
+
+### Updated
+- Upgrade autoprefixer, babel-loader, eslint, eslint-plugin-jsx-a11y, babel-core, postcss-mixins, pre-commit, stylelint, webpack-merge, webpack-validator and postcss-loader.
+
+
 ## [2.1.1] - 2016-12-12
 
 ### Updated
