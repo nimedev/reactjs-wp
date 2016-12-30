@@ -1,5 +1,16 @@
 # Change Log
 
+## [2.3.0] - 2016-12-29
+
+### Added
+- Implement eslint-config-nimedev-react rules.
+- Add .jsbeautifyrc file.
+- Add .editorconfig file.
+
+### Deleted
+- Remove unnecesary vscode settings.
+
+
 ## [2.2.0] - 2016-12-27
 
 ### Updated

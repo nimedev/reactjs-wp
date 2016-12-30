@@ -44,8 +44,8 @@ const common = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'REACTJS_API_URL': JSON.stringify(apiUrl)
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        REACTJS_API_URL: JSON.stringify(apiUrl)
       }
     }),
     new HtmlWebpackPlugin({
