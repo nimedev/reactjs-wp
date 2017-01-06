@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "webpack",
@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/nimedev/reactjs-wp#readme",
   "engines": {
-    "npm": ">=3.10.9",
-    "node": ">=6.9.2 <7.0.0"
+    "npm": ">=3.10",
+    "node": ">=6.9 <7.0.0"
   },
   "dependencies": {
     "niduscss-base": "1.0.1",
@@ -52,7 +52,7 @@
     "react-dom": "15.4.1"
   },
   "devDependencies": {
-    "autoprefixer": "6.6.0",
+    "autoprefixer": "6.6.1",
     "babel-core": "6.21.0",
     "babel-eslint": "7.1.1",
     "babel-loader": "6.2.10",
@@ -63,14 +63,14 @@
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.1",
     "eslint": "3.12.2",
-    "eslint-config-nimedev-react": "1.0.0",
+    "eslint-config-nimedev-react": "2.0.0",
     "eslint-loader": "1.6.1",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "3.0.2",
     "eslint-plugin-react": "6.8.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
-    "html-webpack-plugin": "2.24.1",
+    "html-webpack-plugin": "2.26.0",
     "ip": "1.1.4",
     "json-loader": "0.5.4",
     "opener": "1.4.2",
@@ -84,12 +84,12 @@
     "postcss-nested": "1.0.0",
     "pre-commit": "1.2.2",
     "style-loader": "0.13.1",
-    "stylelint": "7.7.0",
+    "stylelint": "7.7.1",
     "stylelint-config-nimedev": "7.0.0",
     "url-loader": "0.5.7",
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2",
-    "webpack-merge": "2.0.0",
+    "webpack-merge": "2.2.0",
     "webpack-validator": "2.3.0"
   }
 }

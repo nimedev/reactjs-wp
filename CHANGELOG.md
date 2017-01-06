@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.4.0] - 2017-01-05
+
+### Updated
+- Upgrade autoprefixer, eslint-config-nimedev-react, html-webpack-plugin, stylelint and webpack-merge.
+
+
 ## [2.3.0] - 2016-12-29
 
 ### Added

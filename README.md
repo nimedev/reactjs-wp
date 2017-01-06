@@ -16,7 +16,7 @@
 ```sh
 node --version
 ```
-The version should be at or above 6.9.1
+The version should be at or above 6.9
 
 If you don't have Node.js installed go to [nodejs](https://nodejs.org/en/download/) and install the appropiate version or use [nvm](http://www.sergiolepore.net/2014/06/30/nvm-instalando-y-usando-node-version-manager/) (Recommended).
 
@@ -61,7 +61,7 @@ export REACTJS_PORT=8000
 yarn start
 # After this, a message indicate the url to run the application
 ```
-This create a server using `webpack-dev-server` to serve the application in development environment.  
+This create a server using `webpack-dev-server` to serve the application in development environment.
 The browser reloads the app when any file change.
 
 ### Production workflow
