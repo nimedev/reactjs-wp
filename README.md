@@ -39,13 +39,25 @@ yarn
 
 ### Environment variables
 
-#### Host configuration
-- `NODE_ENV="development"`. Environment for server.
-- `REACTJS_HOST=localIP`. Host of webapplication.
-- `REACTJS_PORT=3000`. Port of webapplication (Use in development).
+```sh
+##
+# reactjs-wp environment variables
+##
 
-#### Access URLs
-- `REACTJS_API_URL="http://${ip.address()}:${8080}/api"`. Url of API.
+# Host configuration
+## Environment for server.
+export NODE_ENV="development"
+## Host of webapplication.
+export REACTJS_HOST=localIP
+## Port of webapplication.
+export REACTJS_PORT=3000
+
+# Access URLs
+## Url of API.
+export REACTJS_API_URL="http://${ip.address()}:${8080}/api"
+```
+
+You can copy this script in bashrc file, modify the variables and delete variables that don't need modification or are undefined.
 
 To change any of this variables:
 

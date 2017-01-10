@@ -1,5 +1,15 @@
 # Change Log
 
+## [2.5.0] - 2017-01-10
+
+### Modified
+- Improve documentation for environment variables.
+
+### Updated
+- Upgrade react and react-dom.
+- Upgrade clean-webpack-plugin, eslint, eslint-plugin-react, postcss-import and webpack-merge.
+
+
 ## [2.4.0] - 2017-01-05
 
 ### Updated
@@ -81,7 +91,7 @@
 - Remove typings.
 
 ### Modified
-- Use environemnt variables to set constants with webpack module.
+- Use environment variables to set constants with webpack module.
 - Update App component.
 - Add jsx extension to lint:js script.
 
