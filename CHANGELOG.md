@@ -1,5 +1,14 @@
 # Change Log
 
+## [2.6.0] - 2017-01-12
+
+### Modified
+- Add style guides section to README.md file.
+
+### Updated
+- Upgrade eslint-config-nimedev-react, postcss-loader and webpack-merge.
+
+
 ## [2.5.0] - 2017-01-10
 
 ### Modified

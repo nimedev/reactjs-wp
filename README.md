@@ -122,11 +122,21 @@ yarn run lint
 ```
 
 
-## Styling
+## Style Guides
 
-#### CSS Framework **[niduscss-framework](https://github.com/nimedev/niduscss-framework)**.
+### JavaScript
 
-#### Naming conventions **[SuitCSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md)**.
+**[Nimedev JavaScript style guide](https://github.com/nimedev/javascript)**.
+
+### ReactJS
+
+**[Airbnb React/JSX style suide](https://github.com/nimedev/javascript/tree/master/react)**.
+
+### CSS
+
+**[niduscss-framework](https://github.com/nimedev/niduscss-framework)**.
+
+**[SuitCSS naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md)**.
 
 
 ## Editors
