@@ -4,7 +4,7 @@
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "webpack",
-    "build:prod": "export NODE_ENV='production' && webpack",
+    "install:dev": "export NODE_ENV='development' && yarn",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'App/**/*.css'",
     "lint:js": "eslint . --ext .js --ext .jsx",
