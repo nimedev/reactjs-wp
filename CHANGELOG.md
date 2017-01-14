@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.8.0] - 2017-01-14
+
+### Modified
+- Use `#inline-source-map` in webpack.config.
+
+
 ## [2.7.0] - 2017-01-14
 
 ### Added

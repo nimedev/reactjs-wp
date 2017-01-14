@@ -127,7 +127,7 @@ switch (process.env.npm_lifecycle_event) {
     config = merge(
       common,
       {
-        devtool: 'eval-source-map'
+        devtool: '#inline-source-map'
       },
       parts.setupCSS(PATHS.app),
       parts.devServer({
