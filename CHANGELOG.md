@@ -1,5 +1,14 @@
 # Change Log
 
+## [2.7.0] - 2017-01-14
+
+### Added
+- Add install:dev script.
+
+### Modified
+- Improve workflow documentation.
+
+
 ## [2.6.0] - 2017-01-12
 
 ### Modified
