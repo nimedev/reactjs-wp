@@ -1,5 +1,12 @@
 # Change Log
 
+## [2.9.0] - 2017-01-19
+
+### Updated
+- Upgrade devDep: eslint-config-nimedev-react.
+- Upgrade to yarn 0.19.1.
+
+
 ## [2.8.0] - 2017-01-14
 
 ### Modified

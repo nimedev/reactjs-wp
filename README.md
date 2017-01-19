@@ -24,7 +24,7 @@ If you don't have Node.js installed go to [nodejs](https://nodejs.org/en/downloa
 ```sh
 yarn --version
 ```
-The version should be at or above 0.18.0
+The version should be at or above 0.19.1
 
 If you don't have yarn installed go to [yarn](https://yarnpkg.com/en/docs/install) and install the appropiate version.
 
@@ -90,7 +90,7 @@ You can use two ways:
 yarn install:dev
 
 # Build
-yarn run build
+yarn build
 ```
 After run this script the `dist` folder is ready for production.
 > Run the previous script again every time that update the repository.
@@ -101,11 +101,11 @@ After run this script the `dist` folder is ready for production.
 - Build the application
 ```sh
 # cd to your project folder
-yarn run build
+yarn build
 ```
 After this, all files are ready in `dist` folder to upload in any production server.
 
-:warning: Reset the environment variables to `development` values
+:warning: Reset the environment variables to `development` values.
 
 ### Install/Uninstall/Update dependencies
 Follow this rules to update dependencies:
@@ -138,7 +138,7 @@ To run eslint in console type:
 
 ```sh
 # cd to your project folder
-yarn run lint
+yarn lint
 ```
 
 
