@@ -1,5 +1,11 @@
 # Change Log
 
+## [3.1.3] - 2017-01-22
+
+### Deleted
+- Remove devDep: html-loader.
+
+
 ## [3.1.2] - 2017-01-22
 
 ### Fixed
