@@ -1,5 +1,11 @@
 # Change Log
 
+## [3.1.2] - 2017-01-22
+
+### Fixed
+- Resolve issue changing App folder name to app.
+
+
 ## [3.1.1] - 2017-01-22
 
 ### Modified
