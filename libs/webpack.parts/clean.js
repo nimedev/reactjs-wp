@@ -3,7 +3,6 @@
  * @member webpack.parts
  */
 
-// npm modules
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 /**

@@ -3,7 +3,6 @@
  * @member webpack.parts
  */
 
-// npm modules
 const webpack = require('webpack')
 
 /**

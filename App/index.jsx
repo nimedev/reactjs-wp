@@ -6,6 +6,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+// Import assets to bundle with webpack
+import './favicon.ico'
+import './robots.txt'
+
 // Import base styles before all components
 import './styles/index.css'
 import App from './App'
