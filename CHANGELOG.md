@@ -1,5 +1,11 @@
 # Change Log
 
+## [3.1.4] - 2017-01-22
+
+### Fixed
+- Fix problem loading images from css files.
+
+
 ## [3.1.3] - 2017-01-22
 
 ### Deleted
