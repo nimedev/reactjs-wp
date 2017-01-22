@@ -13,10 +13,10 @@ const host = process.env.REACTJS_HOST || ip.address()
 const port = process.env.REACTJS_PORT || 3000
 const apiUrl = process.env.REACTJS_API_URL || `http://${ip.address()}:${8080}/api`
 const PATHS = {
-  app: path.join(__dirname, 'App'),
+  app: path.join(__dirname, 'app'),
   dist: path.join(__dirname, 'dist'),
-  images: path.join(__dirname, 'App/assets/images'),
-  fonts: path.join(__dirname, 'App/assets/fonts')
+  images: path.join(__dirname, 'app/assets/images'),
+  fonts: path.join(__dirname, 'app/assets/fonts')
 }
 
 const common = merge([

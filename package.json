@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "export NODE_ENV='production' && webpack --env.target production",
