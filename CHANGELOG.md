@@ -1,5 +1,11 @@
 # Change Log
 
+## [3.1.0] - 2017-01-22
+
+### Updated
+- Upgrade devDep: autoprefixer and babel-preset-react.
+
+
 ## [3.0.0] - 2017-01-22
 
 ### Modified
