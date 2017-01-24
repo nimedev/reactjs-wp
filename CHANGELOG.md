@@ -1,5 +1,12 @@
 # Change Log
 
+## [3.2.0] - 2017-01-24
+
+### Modified
+- Add `brace_style` rule to .jsbeautifyrc files.
+- Improve dev-server module.
+
+
 ## [3.1.4] - 2017-01-22
 
 ### Fixed
