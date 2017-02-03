@@ -1,5 +1,17 @@
 # Change Log
 
+## [3.4.0] - 2017-02-03
+
+### Deleted
+- Remove .jsbeautifyrc file.
+
+### Modified
+- Change stylelint config for stylelint-config-niduscss.
+
+### Updated
+- Upgrade devDep: postcss-color-function, postcss-custom-properties, stylelint and webpack-dev-server
+
+
 ## [3.3.0] - 2017-01-31
 
 ### Modified
