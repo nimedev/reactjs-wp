@@ -1,5 +1,15 @@
 # Change Log
 
+## [4.0.0] - 2017-02-10
+
+### Deleted
+- Remove niduscss-lib-mixins library.
+
+### Updated
+- Upgrade dep: niduscss-utils-align, niduscss-utils-shadow and niduscss-utils-text.
+- Upgrade devDep: eslint, eslint-config-nimedev-react and eslint-plugin-jsx-a11y.
+
+
 ## [3.4.0] - 2017-02-03
 
 ### Deleted
