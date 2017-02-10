@@ -26,7 +26,7 @@
     "webpack",
     "postcss"
   ],
-  "author": "nicolasmejiaco@gmail.com",
+  "author": "Nicolás Mejía Correa <nicolasmejiaco@gmail.com> (https://twitter.com/nimedev)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nimedev/reactjs-wp/issues"
@@ -50,8 +50,7 @@
     "niduscss-utils-state": "1.1.1",
     "niduscss-utils-text": "1.3.2",
     "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "stylelint-config-niduscss": "^1.0.0"
+    "react-dom": "15.4.2"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",
@@ -63,11 +62,11 @@
     "babel-preset-stage-1": "6.22.0",
     "clean-webpack-plugin": "0.1.15",
     "css-loader": "0.26.1",
-    "eslint": "3.14.1",
-    "eslint-config-nimedev-react": "2.5.0",
+    "eslint": "3.15.0",
+    "eslint-config-nimedev-react": "3.0.0",
     "eslint-loader": "1.6.1",
     "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jsx-a11y": "3.0.2",
+    "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.9.0",
     "extract-text-webpack-plugin": "2.0.0-beta.5",
     "file-loader": "0.10.0",
@@ -86,6 +85,7 @@
     "pre-commit": "1.2.2",
     "style-loader": "0.13.1",
     "stylelint": "7.8.0",
+    "stylelint-config-niduscss": "1.0.0",
     "url-loader": "0.5.7",
     "webpack": "2.2.1",
     "webpack-dev-server": "2.3.0",
