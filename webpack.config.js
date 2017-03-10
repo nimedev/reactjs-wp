@@ -7,7 +7,7 @@ const opener = require('opener')
 const stylelint = require('stylelint')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const webpackParts = require('webpack-parts-nimedev')
+const webpackKit = require('webpack-kit-nimedev-base')
 
 const host = process.env.REACTJS_HOST || ip.address()
 const port = process.env.REACTJS_PORT || 3000
@@ -42,24 +42,24 @@ const common = merge([
       extensions: ['.jsx', '.js', '.json', '.css']
     }
   },
-  webpackParts.htmlPlugin(),
-  webpackParts.lintCSS(stylelint, { include: PATHS.app }),
-  webpackParts.loadHtml({ include: PATHS.app }),
-  webpackParts.loadImages({
+  webpackKit.htmlPlugin(),
+  webpackKit.lintCSS(stylelint, { include: PATHS.app }),
+  webpackKit.loadHtml({ include: PATHS.app }),
+  webpackKit.loadImages({
     include: PATHS.images,
     options: {
       name: './assets/images/[name].[hash].[ext]',
       limit: 25000
     }
   }),
-  webpackParts.loadSvgSprite({
+  webpackKit.loadSvgSprite({
     include: PATHS.icons,
     options: {
       name: './assets/icons/[name].[hash].[ext]'
     }
   }),
-  webpackParts.loadFonts({ include: PATHS.fonts }),
-  webpackParts.loadAssets({ include: PATHS.app })
+  webpackKit.loadFonts({ include: PATHS.fonts }),
+  webpackKit.loadAssets({ include: PATHS.app })
 ])
 
 module.exports = ({ target }) => {
@@ -75,14 +75,14 @@ module.exports = ({ target }) => {
           new webpack.HashedModuleIdsPlugin()
         ]
       },
-      webpackParts.extractBundles(webpack),
-      webpackParts.cleanPlugin(PATHS.dist),
-      webpackParts.loadJS({
+      webpackKit.extractBundles(webpack),
+      webpackKit.cleanPlugin(PATHS.dist),
+      webpackKit.loadJS({
         test: /\.jsx?$/,
         include: PATHS.app
       }),
-      webpackParts.minify(webpack),
-      webpackParts.extractCSS({ include: PATHS.app })
+      webpackKit.minify(webpack),
+      webpackKit.extractCSS({ include: PATHS.app })
     ])
   }
 
@@ -97,10 +97,10 @@ module.exports = ({ target }) => {
         new webpack.NamedModulesPlugin()
       ]
     },
-    webpackParts.generateSourcemaps('#inline-source-map'),
-    webpackParts.loadCSS({ include: PATHS.app }),
-    webpackParts.devServer(webpack, { host, port }),
-    webpackParts.loadJS({
+    webpackKit.generateSourcemaps('#inline-source-map'),
+    webpackKit.loadCSS({ include: PATHS.app }),
+    webpackKit.devServer(webpack, { host, port }),
+    webpackKit.loadJS({
       test: /\.jsx?$/,
       include: PATHS.app,
       eslintOptions: {

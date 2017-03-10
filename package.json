@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "export NODE_ENV='production' && webpack --env.target production",
@@ -70,8 +70,8 @@
     "stylelint-config-niduscss": "1.0.0",
     "webpack": "2.2.1",
     "webpack-dev-server": "2.4.1",
-    "webpack-merge": "4.0.0",
-    "webpack-parts-nimedev": "1.2.0"
+    "webpack-kit-nimedev-base": "1.0.0",
+    "webpack-merge": "4.0.0"
   },
   "babel": {
     "presets": [
