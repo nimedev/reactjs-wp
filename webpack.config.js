@@ -2,19 +2,22 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ip = require('ip')
 const opener = require('opener')
+const stylelint = require('stylelint')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const parts = require('./libs/webpack.parts')
+const webpackParts = require('webpack-parts-nimedev')
 
 const host = process.env.REACTJS_HOST || ip.address()
 const port = process.env.REACTJS_PORT || 3000
 const apiUrl = process.env.REACTJS_API_URL || `http://${ip.address()}:${8080}/api`
 const PATHS = {
   app: path.join(__dirname, 'app'),
-  dist: path.join(__dirname, 'dist')
+  dist: path.join(__dirname, 'dist'),
+  images: path.join(__dirname, 'app/assets/images'),
+  icons: path.join(__dirname, 'app/assets/icons'),
+  fonts: path.join(__dirname, 'app/assets/fonts')
 }
 
 const common = merge([
@@ -33,33 +36,33 @@ const common = merge([
           NODE_ENV: JSON.stringify(process.env.NODE_ENV),
           REACTJS_API_URL: JSON.stringify(apiUrl)
         }
-      }),
-      new HtmlWebpackPlugin({
-        template: './app/index.html'
       })
     ],
     resolve: {
       extensions: ['.jsx', '.js', '.json', '.css']
-    },
-    module: {
-      rules: [{
-        test: /\.html$/,
-        include: PATHS.app,
-
-        use: 'html-loader'
-      }]
     }
   },
-
-  parts.lintCSS(PATHS.app),
-  parts.loadImages(PATHS.app),
-  parts.loadFonts(PATHS.app),
-  parts.loadAssets(PATHS.app)
+  webpackParts.htmlPlugin(),
+  webpackParts.lintCSS(stylelint, { include: PATHS.app }),
+  webpackParts.loadHtml({ include: PATHS.app }),
+  webpackParts.loadImages({
+    include: PATHS.images,
+    options: {
+      name: './assets/images/[name].[hash].[ext]',
+      limit: 25000
+    }
+  }),
+  webpackParts.loadSvgSprite({
+    include: PATHS.icons,
+    options: {
+      name: './assets/icons/[name].[hash].[ext]'
+    }
+  }),
+  webpackParts.loadFonts({ include: PATHS.fonts }),
+  webpackParts.loadAssets({ include: PATHS.app })
 ])
 
-module.exports = ({
-  target
-}) => {
+module.exports = ({ target }) => {
   // Return production configuration
   if (target === 'production') {
     return merge([
@@ -72,13 +75,14 @@ module.exports = ({
           new webpack.HashedModuleIdsPlugin()
         ]
       },
-      parts.extractBundles(),
-      parts.clean(PATHS.dist),
-      parts.loadJS({
-        paths: PATHS.app
+      webpackParts.extractBundles(webpack),
+      webpackParts.cleanPlugin(PATHS.dist),
+      webpackParts.loadJS({
+        test: /\.jsx?$/,
+        include: PATHS.app
       }),
-      parts.minify(),
-      parts.extractCSS(PATHS.app)
+      webpackParts.minify(webpack),
+      webpackParts.extractCSS({ include: PATHS.app })
     ])
   }
 
@@ -93,15 +97,12 @@ module.exports = ({
         new webpack.NamedModulesPlugin()
       ]
     },
-    parts.generateSourcemaps('#inline-source-map'),
-    parts.loadCSS(PATHS.app),
-    parts.devServer({
-      // Customize host/port here if needed
-      host,
-      port
-    }),
-    parts.loadJS({
-      paths: PATHS.app,
+    webpackParts.generateSourcemaps('#inline-source-map'),
+    webpackParts.loadCSS({ include: PATHS.app }),
+    webpackParts.devServer(webpack, { host, port }),
+    webpackParts.loadJS({
+      test: /\.jsx?$/,
+      include: PATHS.app,
       eslintOptions: {
         // Emit warnings over errors to avoid crashing
         // HMR on error.
