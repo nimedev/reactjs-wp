@@ -1,5 +1,17 @@
 # Change Log
 
+## [5.0.0] - 2017-03-09
+
+### Added
+- Use wepack-parts-nimedev to config webpack.
+
+### Modified
+- Improve colors palette.
+
+### Updated
+- Upgrade devDep: autoprefixer, eslint and ip.
+
+
 ## [4.1.0] - 2017-02-27
 
 ### Updated
