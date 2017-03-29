@@ -1,5 +1,11 @@
 # Change Log
 
+## [5.1.1] - 2017-03-29
+
+### Updated
+- Upgrade devDep: autoprefixer, babel-core, babel-eslint, babel-preset-es2015, eslint, eslint-plugin-react, webpack, webpack-dev-server and webpack-merge.
+
+
 ## [5.1.0] - 2017-03-09
 
 ### Modified
