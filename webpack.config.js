@@ -2,49 +2,46 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 const path = require('path')
-const ip = require('ip')
+
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const opener = require('opener')
-const stylelint = require('stylelint')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const webpackKit = require('webpack-kit-nimedev-base')
+const webpackKit = require('webpack-kit-nimedev')
+const webpackEnv = require('./config/webpack-environment')
 
-const host = process.env.REACTJS_HOST || ip.address()
-const port = process.env.REACTJS_PORT || 3000
-const apiUrl = process.env.REACTJS_API_URL || `http://${ip.address()}:${8080}/api`
 const PATHS = {
-  app: path.join(__dirname, 'app'),
+  src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist'),
-  images: path.join(__dirname, 'app/assets/images'),
-  icons: path.join(__dirname, 'app/assets/icons'),
-  fonts: path.join(__dirname, 'app/assets/fonts')
+  images: path.join(__dirname, 'src/assets/images'),
+  icons: path.join(__dirname, 'src/assets/icons'),
+  fonts: path.join(__dirname, 'src/assets/fonts'),
+  styles: path.join(__dirname, 'src/styles/index.css')
 }
 
 const common = merge([
   // Common settings
   {
     entry: {
-      app: PATHS.app
+      app: PATHS.src
     },
     output: {
       path: PATHS.dist,
       filename: '[name].js'
     },
     plugins: [
-      new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-          REACTJS_API_URL: JSON.stringify(apiUrl)
-        }
-      })
+      new webpack.DefinePlugin(Object.assign(
+        {},
+        webpackEnv.defineEnvironment
+      ))
     ],
     resolve: {
       extensions: ['.jsx', '.js', '.json', '.css']
     }
   },
-  webpackKit.htmlPlugin(),
-  webpackKit.lintCSS(stylelint, { include: PATHS.app }),
-  webpackKit.loadHtml({ include: PATHS.app }),
+  webpackKit.htmlPlugin({ template: './src/index.html' }, ['vendor', 'app']),
+  webpackKit.lintCSS({ files: 'src/**/*.css' }),
+  webpackKit.loadHtml({ include: PATHS.src }),
   webpackKit.loadImages({
     include: PATHS.images,
     options: {
@@ -59,7 +56,7 @@ const common = merge([
     }
   }),
   webpackKit.loadFonts({ include: PATHS.fonts }),
-  webpackKit.loadAssets({ include: PATHS.app })
+  webpackKit.loadAssets({ include: PATHS.src })
 ])
 
 module.exports = ({ target }) => {
@@ -72,42 +69,57 @@ module.exports = ({ target }) => {
           filename: '[name].[chunkhash].js'
         },
         plugins: [
-          new webpack.HashedModuleIdsPlugin()
+          new webpack.HashedModuleIdsPlugin(),
+          new CleanWebpackPlugin([PATHS.dist], {
+            // Without `root` CleanWebpackPlugin won't point to our
+            // project and will fail to work.
+            root: process.cwd()
+          }),
+          new webpack.optimize.UglifyJsPlugin({
+            compress: {
+              warnings: false
+            }
+          })
         ]
       },
-      webpackKit.extractBundles(webpack),
-      webpackKit.cleanPlugin(PATHS.dist),
+      webpackKit.extractVendor(webpack, { chunks: ['app'] }),
       webpackKit.loadJS({
         test: /\.jsx?$/,
-        include: PATHS.app
+        include: PATHS.src
       }),
-      webpackKit.minify(webpack),
-      webpackKit.extractCSS({ include: PATHS.app })
+
+      // Load global styles
+      webpackKit.extractCSS({ include: PATHS.styles })
     ])
   }
 
   // Run opener
-  opener(`http://${host}:${port}`)
+  opener(`http://${webpackEnv.host}:${webpackEnv.port}`)
 
   // Return development configurations
   return merge([
     common,
     {
+      devtool: '#inline-source-map',
       plugins: [
         new webpack.NamedModulesPlugin()
       ]
     },
-    webpackKit.generateSourcemaps('#inline-source-map'),
-    webpackKit.loadCSS({ include: PATHS.app }),
-    webpackKit.devServer(webpack, { host, port }),
+    webpackKit.devServer(webpack, {
+      host: webpackEnv.host,
+      port: webpackEnv.port
+    }),
     webpackKit.loadJS({
       test: /\.jsx?$/,
-      include: PATHS.app,
+      include: PATHS.src,
       eslintOptions: {
         // Emit warnings over errors to avoid crashing
         // HMR on error.
         emitWarning: true
       }
-    })
+    }),
+
+    // Load global styles
+    webpackKit.loadCSS({ include: PATHS.styles })
   ])
 }

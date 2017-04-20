@@ -6,10 +6,10 @@
     "build": "export NODE_ENV='production' && webpack --env.target production",
     "install:dev": "export NODE_ENV='development' && yarn",
     "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint 'app/**/*.css'",
+    "lint:css": "stylelint 'src/**/*.css'",
     "lint:js": "eslint . --ext .js --ext .jsx",
     "start": "npm run watch",
-    "stats": "export NODE_ENV='production' && webpack --env.target production --profile --json > tmp/stats.json",
+    "stats": "export NODE_ENV='production' && webpack --env.target production --profile --json > webpack-stats.json && webpack-bundle-analyzer webpack-stats.json dist",
     "watch": "export NODE_ENV='development' && webpack-dev-server --env.target development"
   },
   "pre-commit": [
@@ -51,6 +51,7 @@
     "babel-preset-es2015": "6.24.0",
     "babel-preset-react": "6.23.0",
     "babel-preset-stage-1": "6.22.0",
+    "clean-webpack-plugin": "0.1.16",
     "eslint": "3.18.0",
     "eslint-config-nimedev-react": "3.0.0",
     "eslint-plugin-import": "2.2.0",
@@ -69,8 +70,9 @@
     "stylelint": "7.9.0",
     "stylelint-config-niduscss": "1.0.0",
     "webpack": "2.3.2",
+    "webpack-bundle-analyzer": "2.4.0",
     "webpack-dev-server": "2.4.2",
-    "webpack-kit-nimedev-base": "1.0.0",
+    "webpack-kit-nimedev": "6.0.0",
     "webpack-merge": "4.1.0"
   },
   "babel": {
