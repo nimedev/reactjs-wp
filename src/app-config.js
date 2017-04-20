@@ -6,13 +6,10 @@
 /**
  * Constants object for application
  */
-export default {
-  // Application name for angular
-  appName: 'reactjs-wp',
-
+export default Object.freeze({
   // API base url
-  restUrl: process.env.REACTJS_API_URL,
+  REST_URL: process.env.REACTJS_API_URL,
 
   // Save the environment
-  env: process.env.NODE_ENV
-}
+  ENV: process.env.NODE_ENV
+})

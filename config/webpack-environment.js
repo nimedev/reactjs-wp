@@ -9,11 +9,11 @@
 const ip = require('ip')
 
 // Server variables
-const host = process.env.NG_SEED_HOST || ip.address()
-const port = process.env.NG_SEED_PORT || 3000
+const host = process.env.REACTJS_HOST || ip.address()
+const port = process.env.REACTJS_PORT || 3000
 
 // Variables to pass in DefinePlugin
-const apiUrl = process.env.NG_SEED_API_URL || `http://${ip.address()}:${8080}/api`
+const apiUrl = process.env.REACTJS_API_URL || `http://${ip.address()}:${8080}/api`
 
 module.exports = {
   host,
@@ -21,7 +21,7 @@ module.exports = {
   defineEnvironment: {
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      NG_SEED_API_URL: JSON.stringify(apiUrl)
+      REACTJS_API_URL: JSON.stringify(apiUrl)
     }
   }
 }
