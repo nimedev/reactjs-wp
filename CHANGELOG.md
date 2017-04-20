@@ -1,5 +1,19 @@
 # Change Log
 
+## [6.0.0] - 2017-04-20
+
+### Deleted
+- Remove: .vscode folder.
+
+### Modified
+- Rename: constants.js to app-config.js
+- Use webpack-kit-nimedev and use src folder instead app.
+
+### Updated
+- Upgrade dep: react react-dom
+- Upgrade devDep: babel-core babel-eslint babel-preset-es2015 babel-preset-react babel-preset-stage-1 eslint eslint-config-nimedev-react postcss-nested stylelint webpack
+
+
 ## [5.1.1] - 2017-03-29
 
 ### Updated
