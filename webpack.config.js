@@ -18,14 +18,15 @@ const PATHS = {
   images: path.join(__dirname, 'src/assets/images'),
   icons: path.join(__dirname, 'src/assets/icons'),
   fonts: path.join(__dirname, 'src/assets/fonts'),
-  styles: path.join(__dirname, 'src/styles/index.css')
+  styles: path.join(__dirname, 'src')
 }
 
 const common = merge([
   // Common settings
   {
     entry: {
-      app: PATHS.src
+      app: PATHS.src,
+      polyfills: `${PATHS.src}/polyfills.js`
     },
     output: {
       path: PATHS.dist,
@@ -41,7 +42,7 @@ const common = merge([
       extensions: ['.jsx', '.js', '.json', '.css']
     }
   },
-  webpackKit.htmlPlugin({ template: './src/index.html' }, ['vendor', 'app']),
+  webpackKit.htmlPlugin({ template: './src/index.html' }, ['polyfills', 'vendor', 'app']),
   webpackKit.lintCSS({ files: 'src/**/*.css' }),
   webpackKit.loadHtml({ include: PATHS.src }),
   webpackKit.loadImages({
