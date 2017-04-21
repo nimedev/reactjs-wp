@@ -1,5 +1,14 @@
 # Change Log
 
+## [6.1.0] - 2017-04-21
+
+### Added
+- Add: polyfills chunk to webpack
+
+### Modified
+- Export app-config constants with export const
+
+
 ## [6.0.0] - 2017-04-20
 
 ### Deleted
