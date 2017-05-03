@@ -32,18 +32,17 @@ const common = merge([
       path: PATHS.dist,
       filename: '[name].js'
     },
+    resolve: {
+      extensions: ['.jsx', '.js', '.json', '.css']
+    },
+
     plugins: [
       new webpack.DefinePlugin(Object.assign(
         {},
         webpackEnv.defineEnvironment
       ))
-    ],
-    resolve: {
-      extensions: ['.jsx', '.js', '.json', '.css']
-    }
+    ]
   },
-  webpackKit.htmlPlugin({ template: './src/index.html' }, ['polyfills', 'vendor', 'app']),
-  webpackKit.lintCSS({ files: 'src/**/*.css' }),
   webpackKit.loadHtml({ include: PATHS.src }),
   webpackKit.loadImages({
     include: PATHS.images,
@@ -59,7 +58,24 @@ const common = merge([
     }
   }),
   webpackKit.loadFonts({ include: PATHS.fonts }),
-  webpackKit.loadAssets({ include: PATHS.src })
+  webpackKit.loadAssets({ include: PATHS.src }),
+
+  // CSS
+  webpackKit.lintCSS({ files: 'src/**/*.css' }),
+
+  // JS
+  webpackKit.loadJS({
+    test: /\.jsx?$/,
+    include: PATHS.src,
+    eslintOptions: {
+      // Emit warnings over errors to avoid crashing
+      // HMR on error.
+      emitWarning: process.env.NODE_ENV === 'development'
+    }
+  }),
+
+  // Plugins
+  webpackKit.htmlPlugin({ template: './src/index.html' }, ['polyfills', 'vendor', 'app'])
 ])
 
 module.exports = ({ target }) => {
@@ -86,10 +102,6 @@ module.exports = ({ target }) => {
         ]
       },
       webpackKit.extractVendor(webpack, { chunks: ['app'] }),
-      webpackKit.loadJS({
-        test: /\.jsx?$/,
-        include: PATHS.src
-      }),
 
       // Load global styles
       webpackKit.extractCSS({ include: PATHS.styles })
@@ -111,15 +123,6 @@ module.exports = ({ target }) => {
     webpackKit.devServer(webpack, {
       host: webpackEnv.host,
       port: webpackEnv.port
-    }),
-    webpackKit.loadJS({
-      test: /\.jsx?$/,
-      include: PATHS.src,
-      eslintOptions: {
-        // Emit warnings over errors to avoid crashing
-        // HMR on error.
-        emitWarning: true
-      }
     }),
 
     // Load global styles

@@ -1,5 +1,14 @@
 # Change Log
 
+## [6.2.0] - 2017-05-02
+
+### Modified
+- Improve webpack configuration.
+
+### Updated
+- Upgrade devDep: babel-eslint webpack-dev-server.
+
+
 ## [6.1.0] - 2017-04-21
 
 ### Added
