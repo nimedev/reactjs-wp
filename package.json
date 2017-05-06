@@ -69,10 +69,10 @@
     "pre-commit": "1.2.2",
     "stylelint": "7.10.1",
     "stylelint-config-niduscss": "1.0.0",
-    "webpack": "2.4.1",
+    "webpack": "2.5.0",
     "webpack-bundle-analyzer": "2.4.0",
     "webpack-dev-server": "2.4.5",
-    "webpack-kit-nimedev": "6.0.0",
+    "webpack-kit-nimedev": "7.0.1",
     "webpack-merge": "4.1.0"
   },
   "babel": {
