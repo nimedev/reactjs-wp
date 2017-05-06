@@ -1,5 +1,14 @@
 # Change Log
 
+## [6.3.0] - 2017-05-06
+
+### Modified
+- Improve webpack configuration.
+
+### Updated
+- Upgrade devDep: webpack webpack-kit-nimedev.
+
+
 ## [6.2.0] - 2017-05-02
 
 ### Modified

@@ -44,19 +44,8 @@ const common = merge([
     ]
   },
   webpackKit.loadHtml({ include: PATHS.src }),
-  webpackKit.loadImages({
-    include: PATHS.images,
-    options: {
-      name: './assets/images/[name].[hash].[ext]',
-      limit: 25000
-    }
-  }),
-  webpackKit.loadSvgSprite({
-    include: PATHS.icons,
-    options: {
-      name: './assets/icons/[name].[hash].[ext]'
-    }
-  }),
+  webpackKit.loadImages({ include: PATHS.images }),
+  webpackKit.loadSvgSprite({ include: PATHS.icons }),
   webpackKit.loadFonts({ include: PATHS.fonts }),
   webpackKit.loadAssets({ include: PATHS.src }),
 
