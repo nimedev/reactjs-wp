@@ -1,5 +1,11 @@
 # Change Log
 
+## [6.3.1] - 2017-05-22
+
+### Updated
+- Upgrade devDep: autoprefixer postcss-calc postcss-color-function postcss-custom-media postcss-custom-properties postcss-import postcss-mixins postcss-nested webpack webpack-bundle-analyzer webpack-kit-nimedev.
+
+
 ## [6.3.0] - 2017-05-06
 
 ### Modified
