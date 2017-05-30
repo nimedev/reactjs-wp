@@ -4,7 +4,7 @@
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "export NODE_ENV='production' && webpack --env.target production",
-    "install:dev": "export NODE_ENV='development' && yarn",
+    "install:dev": "export NODE_ENV='development' && npm install",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:js": "eslint . --ext .js --ext .jsx",
@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/nimedev/reactjs-wp#readme",
   "engines": {
-    "npm": ">=3.10",
+    "npm": ">=5.0.0",
     "node": ">=6.9 <7.0.0"
   },
   "dependencies": {
