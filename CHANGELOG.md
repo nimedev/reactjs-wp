@@ -1,5 +1,14 @@
 # Change Log
 
+## [7.0.0] - 2017-05-30
+
+### Modified
+- [Breaking Change] Upgrade to npm v5.0.0 and update README.md documentation.
+
+### Updated
+- Upgrade devDep: eslint-config-nimedev-react eslint-plugin-import webpack webpack-kit-nimedev.
+
+
 ## [6.3.1] - 2017-05-22
 
 ### Updated

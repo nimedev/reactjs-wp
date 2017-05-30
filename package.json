@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "6.3.1",
+  "version": "7.0.0",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "export NODE_ENV='production' && webpack --env.target production",
@@ -53,8 +53,8 @@
     "babel-preset-stage-1": "6.24.1",
     "clean-webpack-plugin": "0.1.16",
     "eslint": "3.19.0",
-    "eslint-config-nimedev-react": "3.0.1",
-    "eslint-plugin-import": "2.2.0",
+    "eslint-config-nimedev-react": "4.2.0",
+    "eslint-plugin-import": "2.3.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.3",
     "ip": "1.1.5",
@@ -69,10 +69,10 @@
     "pre-commit": "1.2.2",
     "stylelint": "7.10.1",
     "stylelint-config-niduscss": "1.0.0",
-    "webpack": "2.5.1",
+    "webpack": "2.6.1",
     "webpack-bundle-analyzer": "2.8.2",
     "webpack-dev-server": "2.4.5",
-    "webpack-kit-nimedev": "7.0.2",
+    "webpack-kit-nimedev": "9.0.0",
     "webpack-merge": "4.1.0"
   },
   "babel": {

@@ -21,7 +21,7 @@ module.exports = {
   defineEnvironment: {
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      REACTJS_API_URL: JSON.stringify(apiUrl)
-    }
-  }
+      REACTJS_API_URL: JSON.stringify(apiUrl),
+    },
+  },
 }
