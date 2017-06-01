@@ -1,10 +1,10 @@
 {
   "name": "reactjs-wp",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
-    "build": "export NODE_ENV='production' && webpack --env.target production",
-    "install:dev": "export NODE_ENV='development' && npm install",
+    "build": "npm run install:dev && export NODE_ENV='production' && webpack --env.target production",
+    "install:dev": "npm install --production=false",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:js": "eslint . --ext .js --ext .jsx",

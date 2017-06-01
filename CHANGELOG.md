@@ -1,5 +1,17 @@
 # Change Log
 
+## [7.0.1] - 2017-05-31
+
+### Modified
+- Use install:dev script in build script.
+
+### Fixed
+- Fix bug in install:dev script.
+
+### Updated
+- Upgrade devDep: eslint-config-nimedev-react.
+
+
 ## [7.0.0] - 2017-05-30
 
 ### Modified
