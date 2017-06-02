@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.0.2] - 2017-06-02
+
+### Fixed
+- Fix workflow section in README.md documentation.
+
+
 ## [7.0.1] - 2017-05-31
 
 ### Modified
