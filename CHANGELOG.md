@@ -1,5 +1,14 @@
 # Change Log
 
+## [7.1.0] - 2017-06-11
+
+### Modified
+- Organize styles settings by modules.
+
+### Updated
+- Upgrade devDep: babel-core stylelint webpack-kit-nimedev.
+
+
 ## [7.0.2] - 2017-06-02
 
 ### Fixed
