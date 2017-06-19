@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.2.1] - 2017-06-19
+
+### Fixed
+- Fix package-lock.json version.
+
+
 ## [7.2.0] - 2017-06-19
 
 ### Added
