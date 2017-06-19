@@ -1,5 +1,18 @@
 # Change Log
 
+## [7.2.0] - 2017-06-19
+
+### Added
+- Add inline entry point and ProgressPlugin to webpack configuration.
+
+### Deleted
+- Remove pre-commit hook.
+
+### Updated
+- Upgrade dep: react react-dom.
+- Upgrade devDep: stylelint.
+
+
 ## [7.1.0] - 2017-06-11
 
 ### Modified
