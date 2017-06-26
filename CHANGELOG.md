@@ -1,5 +1,12 @@
 # Change Log
 
+## [7.2.2] - 2017-06-26
+
+### Updated
+- Upgrade devDep: eslint-config-nimedev-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react.
+- Upgrade devDep: postcss-mixins webpack webpack-dev-server webpack-kit-nimedev.
+
+
 ## [7.2.1] - 2017-06-19
 
 ### Fixed
