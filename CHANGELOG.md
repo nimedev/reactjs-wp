@@ -1,5 +1,13 @@
 # Change Log
 
+## [7.2.3] - 2017-07-05
+
+### Updated
+- Upgrade to webpack-kit-nimedev v10.
+- Upgrade dep: niduscss-elements-form.
+- Upgrade devDep: eslint-plugin-import postcss-custom-properties stylelint.
+
+
 ## [7.2.2] - 2017-06-26
 
 ### Updated

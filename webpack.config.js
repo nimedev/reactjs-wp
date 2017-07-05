@@ -47,6 +47,35 @@ const common = merge([
       extensions: ['.jsx', '.js', '.json', '.css'],
     },
 
+    // JS loaders
+    module: {
+      rules: [{
+        test: /\.jsx?$/,
+        include: PATHS.src,
+        enforce: 'pre',
+
+        loader: 'eslint-loader',
+        options: {
+          // Emit warnings over errors to avoid crashing
+          // HMR on error.
+          emitWarning: process.env.NODE_ENV === 'development',
+        },
+      }, {
+        test: /\.jsx?$/,
+        include: PATHS.src,
+
+        loader: 'babel-loader',
+        options: {
+          // Enable caching for improved performance during
+          // development.
+          // It uses default OS directory by default. If you need
+          // something more custom, pass a path to it.
+          // I.e., { cacheDirectory: '<path>' }
+          cacheDirectory: true,
+        },
+      }],
+    },
+
     plugins: [
       new ProgressPlugin(),
       new webpack.DefinePlugin(Object.assign(
@@ -62,17 +91,6 @@ const common = merge([
 
   // CSS
   webpackKit.lintCSS({ files: 'src/**/*.css' }),
-
-  // JS
-  webpackKit.loadJS({
-    test: /\.jsx?$/,
-    include: PATHS.src,
-    eslintOptions: {
-      // Emit warnings over errors to avoid crashing
-      // HMR on error.
-      emitWarning: process.env.NODE_ENV === 'development',
-    },
-  }),
 
   // Plugins
   webpackKit.htmlPlugin({ template: './src/index.html' }, entryPoints),
