@@ -53,7 +53,6 @@ const common = merge([
         test: /\.jsx?$/,
         include: PATHS.src,
         enforce: 'pre',
-
         loader: 'eslint-loader',
         options: {
           // Emit warnings over errors to avoid crashing
@@ -63,7 +62,6 @@ const common = merge([
       }, {
         test: /\.jsx?$/,
         include: PATHS.src,
-
         loader: 'babel-loader',
         options: {
           // Enable caching for improved performance during

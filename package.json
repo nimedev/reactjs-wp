@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "7.2.3",
+  "version": "7.2.4",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "npm run install:dev && export NODE_ENV='production' && webpack --env.target production",
@@ -42,7 +42,7 @@
     "react-dom": "15.6.1"
   },
   "devDependencies": {
-    "autoprefixer": "7.1.1",
+    "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
     "babel-loader": "7.1.1",
@@ -52,8 +52,8 @@
     "clean-webpack-plugin": "0.1.16",
     "eslint": "3.19.0",
     "eslint-config-nimedev-react": "5.0.1",
-    "eslint-loader": "1.8.0",
-    "eslint-plugin-import": "2.6.1",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-import": "2.7.0",
     "eslint-plugin-jsx-a11y": "5.0.3",
     "eslint-plugin-react": "7.1.0",
     "ip": "1.1.5",
@@ -67,10 +67,10 @@
     "postcss-nested": "2.0.2",
     "stylelint": "7.12.0",
     "stylelint-config-niduscss": "1.0.0",
-    "webpack": "3.0.0",
+    "webpack": "3.1.0",
     "webpack-bundle-analyzer": "2.8.2",
-    "webpack-dev-server": "2.5.0",
-    "webpack-kit-nimedev": "10.0.0",
+    "webpack-dev-server": "2.5.1",
+    "webpack-kit-nimedev": "11.0.0",
     "webpack-merge": "4.1.0"
   },
   "babel": {

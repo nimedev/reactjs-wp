@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.2.4] - 2017-07-10
+
+### Updated
+- Upgrade devDep: autoprefixer eslint-loader eslint-plugin-import webpack webpack-dev-server webpack-kit-nimedev.
+
+
 ## [7.2.3] - 2017-07-05
 
 ### Updated
