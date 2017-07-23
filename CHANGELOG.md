@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.3.0] - 2017-07-23
+
+- Improve webpack configuration.
+- Upgrade devDep: postcss-nested stylelint webpack webpack-bundle-analyzer webpack-dev-server webpack-kit-nimedev.
+
+
 ## [7.2.4] - 2017-07-10
 
 ### Updated
