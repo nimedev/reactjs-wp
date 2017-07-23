@@ -7,14 +7,16 @@ const path = require('path')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const opener = require('opener')
-const webpack = require('webpack')
-const { CommonsChunkPlugin, ModuleConcatenationPlugin } = require('webpack').optimize
+const { DefinePlugin, HashedModuleIdsPlugin, NamedModulesPlugin } = require('webpack')
+const { ModuleConcatenationPlugin, UglifyJsPlugin } = require('webpack').optimize
 const ProgressPlugin = require('webpack/lib/ProgressPlugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const merge = require('webpack-merge')
 const webpackKit = require('webpack-kit-nimedev')
 const webpackEnv = require('./config/webpack-environment')
 
-const entryPoints = ['inline', 'polyfills', 'vendor', 'app']
+const entryPoints = ['vendor', 'app']
+
 const PATHS = {
   src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist'),
@@ -36,7 +38,6 @@ const common = merge([
   {
     entry: {
       app: PATHS.src,
-      polyfills: `${PATHS.src}/polyfills.js`,
     },
     output: {
       path: PATHS.dist,
@@ -76,7 +77,7 @@ const common = merge([
 
     plugins: [
       new ProgressPlugin(),
-      new webpack.DefinePlugin(Object.assign(
+      new DefinePlugin(Object.assign(
         {},
         webpackEnv.defineEnvironment
       )),
@@ -105,21 +106,20 @@ module.exports = ({ target }) => {
           chunkFilename: '[id].[chunkhash].js',
         },
         plugins: [
+          new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+          }),
           new ModuleConcatenationPlugin(),
-          new webpack.HashedModuleIdsPlugin(),
+          new HashedModuleIdsPlugin(),
           new CleanWebpackPlugin([PATHS.dist], {
             // Without `root` CleanWebpackPlugin won't point to our
             // project and will fail to work.
             root: process.cwd(),
           }),
-          new webpack.optimize.UglifyJsPlugin({
+          new UglifyJsPlugin({
             compress: {
               warnings: false,
             },
-          }),
-          new CommonsChunkPlugin({
-            name: ['inline'],
-            minChunks: null,
           }),
         ],
       },
@@ -140,7 +140,7 @@ module.exports = ({ target }) => {
     {
       devtool: '#inline-source-map',
       plugins: [
-        new webpack.NamedModulesPlugin(),
+        new NamedModulesPlugin(),
       ],
     },
     webpackKit.devServer({

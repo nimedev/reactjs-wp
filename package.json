@@ -3,13 +3,13 @@
   "version": "7.2.4",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
-    "build": "npm run install:dev && export NODE_ENV='production' && webpack --env.target production",
+    "build": "npm run install:dev && npm run build:prod",
+    "build:prod": "export NODE_ENV='production' && webpack --env.target production",
     "install:dev": "npm install --production=false",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:js": "eslint . --ext .js --ext .jsx",
     "start": "npm run watch",
-    "stats": "export NODE_ENV='production' && webpack --env.target production --profile --json > webpack-stats.json && webpack-bundle-analyzer webpack-stats.json dist",
     "watch": "export NODE_ENV='development' && webpack-dev-server --env.target development"
   },
   "repository": {
