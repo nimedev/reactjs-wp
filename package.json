@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "7.3.0",
+  "version": "7.3.1",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "npm run install:dev && npm run build:prod",
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/nimedev/reactjs-wp#readme",
   "engines": {
-    "npm": ">=5.0.0",
-    "node": ">=6.9 <7.0.0"
+    "npm": ">=5.3.0",
+    "node": ">=8.1.4"
   },
   "dependencies": {
     "niduscss-base": "1.0.1",

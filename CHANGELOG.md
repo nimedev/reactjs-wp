@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.3.1] - 2017-07-29
+
+### Updated
+- Upgrade devDep: postcss-nested stylelint stylelint-config-niduscss webpack webpack-kit-nimedev.
+
+
 ## [7.3.0] - 2017-07-23
 
 - Improve webpack configuration.
