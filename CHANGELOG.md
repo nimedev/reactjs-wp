@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.3.2] - 2017-08-06
+
+### Updated
+- Upgrade devDep: webpack-bundle-analyzer webpack-kit-nimedev.
+
+
 ## [7.3.1] - 2017-07-29
 
 ### Updated

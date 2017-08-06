@@ -1,6 +1,6 @@
 {
   "name": "reactjs-wp",
-  "version": "7.3.1",
+  "version": "7.3.2",
   "description": "A starting point for building web applications with ReactJS using ES6, Webpack and PostCSS",
   "scripts": {
     "build": "npm run install:dev && npm run build:prod",
